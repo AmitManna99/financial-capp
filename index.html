@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Nunito:wght@600;700;800&family=Roboto:wght@400;500&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css" />
+
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.js"></script>
+
+    <link rel="icon" href="favicon.png">
+
+    <link rel="stylesheet" href="css/styles.css">
+
+    <title>Financial Calculator</title>
+</head>
+
+<body>
+
+    <!-- Navbar -->
+    <nav class="amber lighten-1">
+        <div class="nav-wrapper">
+            <a href="#" class="brand-logo center hide-on-small-only"><img class="responsive-img" src="/assets/icon/capp-wide.png" alt="capp_logo"></a>
+            <a href="#" class="brand-logo center hide-on-med-and-up"><img class="responsive-img" src="/assets/icon/capp.png" alt="capp_logo"></a>
+        </div>
+    </nav>
+    <!-- /. Navbar -->
+
+    <div class="container">
+        <h3 class="center">Mutual Fund Calculators</h3>
+        <ul class="collapsible" id="collapsible">
+
+            <!-- =========== Inflation Calculation =========== -->
+            <li>
+                <div class="collapsible-header">
+                    <span class="col-header-text">Inflation Calculator
+                        <br>
+                        <span id="sub-text">Find out how much you will need in the future to meet your current
+                            expenses whilst keeping up with inflation.</span>
+                    </span>
+
+                </div>
+                <div class="collapsible-body">
+                    <span>
+                        <div class="row">
+                            <div class="col l6 s12">
+                                <form id="inflation-calculator">
+                                    <div class="input-field">
+                                        <input id="amount-1" type="text" class="validate">
+                                        <label for="amount-1">Amount</label>
+                                    </div>
+                                    <div class="input-field">
+                                        <input id="time-1" type="text" class="validate">
+                                        <label for="time-1">Time Period (in Years)</label>
+                                    </div>
+                                    <div class="input-field">
+                                        <input id="rate-1" type="text" class="validate">
+                                        <label for="rate-1">Annual Inflation Rate</label>
+                                    </div>
+                                    <button class="waves-effect waves-light btn amber"
+                                        id="calInflation">Calculate</button>
+                                </form>
+                            </div>
+                            <div class="col l6 s12">
+                                <div class="loss-text" id="inflation-result"></div>
+                            </div>
+                        </div>
+                    </span>
+                </div>
+            </li>
+
+            <!-- =========== Retirement Investment Plan =========== -->
+            <li>
+                <div class="collapsible-header">
+                    <span class="col-header-text">Retirement Investment Plan
+                        <br>
+                        <span id="sub-text">Calculate how much money you need at the age of your Retirement,
+                            so that you can spend your rest of the life easily.</span>
+                    </span>
+                </div>
+                <div class="collapsible-body">
+                    <span>
+                        <div class="row">
+                            <div class="col l6 s12">
+                                <form id="rip-calculator">
+                                    <div class="input-field">
+                                        <input id="amount-2" type="text" class="validate">
+                                        <label for="amount-2">Monthly Expenses</label>
+                                    </div>
+                                    <div class="input-field">
+                                        <input id="time-2" type="text" class="validate">
+                                        <label for="time-2">Survival Time (in Years)</label>
+                                    </div>
+                                    <button class="waves-effect waves-light btn amber"
+                                        id="calInflation">Calculate</button>
+                                </form>
+                            </div>
+                            <div class="col l6 s12">
+                                <div id="rip-result"></div>
+                            </div>
+                        </div>
+                    </span>
+                </div>
+            </li>
+
+            <!-- =========== Calculate Goal SIP =========== -->
+            <li>
+                <div class="collapsible-header">
+                    <span class="col-header-text">Calculate Goal SIP
+                        <br>
+                        <span id="sub-text">Determine the monthly SIP investments you need to make to reach a particular
+                            goal.</span>
+                    </span>
+                </div>
+                <div class="collapsible-body">
+                    <span>
+                        <div class="row">
+                            <div class="col l6 s12">
+                                <form id="goal-calculator">
+                                    <div class="input-field">
+                                        <input id="amount-3" type="text" class="validate">
+                                        <label for="amount-3">Target Amount</label>
+                                    </div>
+                                    <div class="input-field">
+                                        <input id="time-3" type="text" class="validate">
+                                        <label for="time-3">Time Period (in Years)</label>
+                                    </div>
+                                    <div class="input-field">
+                                        <input id="rate-3" type="text" class="validate">
+                                        <label for="rate-3">Expected Return Rate</label>
+                                    </div>
+                                    <button class="waves-effect waves-light btn amber"
+                                        id="calInflation">Calculate</button>
+                                </form>
+                            </div>
+                            <div class="col l6 s12">
+                                <div id="goal-result"></div>
+                            </div>
+                        </div>
+                    </span>
+                </div>
+            </li>
+
+            <!-- =========== SIP Calculator =========== -->
+            <li>
+                <div class="collapsible-header">
+                    <span class="col-header-text">SIP Calculator
+                        <br>
+                        <span id="sub-text">Find the future value of your monthly/quarterly SIP investment.</span>
+                    </span>
+                </div>
+                <div class="collapsible-body">
+                    <span>
+                        <div class="row">
+                            <div class="col l6 s12">
+                                <form id="sip-calculator">
+                                    <div class="input-field">
+                                        <input id="amount-4" type="text" class="validate">
+                                        <label for="amount-4">Monthly SIP Amount</label>
+                                    </div>
+                                    <div class="input-field">
+                                        <input id="time-4" type="text" class="validate">
+                                        <label for="time-4">Time Period (in Years)</label>
+                                    </div>
+                                    <div class="input-field">
+                                        <input id="rate-4" type="text" class="validate">
+                                        <label for="rate-4">Expected Return Rate</label>
+                                    </div>
+                                    <button class="waves-effect waves-light btn amber"
+                                        id="calInflation">Calculate</button>
+                                </form>
+                            </div>
+                            <div class="col l6 s12">
+                                <div id="sip-result"></div>
+                            </div>
+                        </div>
+                    </span>
+                </div>
+            </li>
+        </ul>
+    </div>
+
+    <footer class="page-footer amber lighten-3">
+        <div class="container">
+            <div class="row">
+
+                <div class="col l6 s12">
+                    <a href="https://github.com/amitm99/">
+                        <h4 class="header-card grey darken-3 white-text"><i class="fa fa-github"></i>&nbsp;&nbsp;GitHub</h4>
+                    </a>
+                </div>
+                <div class="col l6 s12">
+                    <a href="https://twitter.com/AmitMan99/">
+                        <h4 class="header-card blue lighten-1 white-text"><i class="fa fa-twitter"></i>&nbsp;&nbsp;Twitter</h4>
+                    </a>
+                </div>
+                <div class="col l6 s12">
+                    <a href="https://facebook.com/amit.manna.7687/">
+                        <h4 class="header-card blue darken-4 white-text"><i class="fa fa-facebook"></i>&nbsp;&nbsp;Facebook
+                        </h4>
+                    </a>
+                </div>
+                <div class="col l6 s12">
+                    <a href="mailto:manna.amit99@gmail.com">
+                        <h4 class="header-card red darken-3 white-text"><i class="fa fa-envelope"></i>&nbsp;&nbsp;Email</h4>
+                    </a>
+                </div>
+
+            </div>
+        </div>
+
+            <div class="footer-copyright">
+                <div class="container grey-text text-darken-3">
+                    © 2019 Copyright Text
+                </div>
+            </div>
+    </footer>
+
+
+    <script src="js/script.js"></script>
+</body>
+
+</html>

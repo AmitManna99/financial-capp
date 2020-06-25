@@ -1,0 +1,80 @@
+/* ========== Text ========== */
+.col-header-text {
+    font-family: 'Nunito', sans-serif;
+    font-weight: 700;
+    font-size: large;
+}
+
+.profit-text {
+    font-family: 'Nunito', sans-serif;
+    font-weight: 700;
+    font-size: medium;
+    padding-top: 5%;
+    color: #15A154;
+}
+
+.loss-text {
+    font-family: 'Nunito', sans-serif;
+    font-weight: 700;
+    font-size: medium;
+    padding-top: 5%;
+    color: #EE5530;
+}
+
+.invested-text {
+    font-family: 'Nunito', sans-serif;
+    font-weight: 700;
+    font-size: medium;
+    padding-top: 5%;
+    color: #0074D9;
+}
+
+#sub-text {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+    font-size: small;
+    line-height: 0;
+    color: gray;
+}
+
+h3 {
+    font-family: 'Nunito', sans-serif;
+    font-weight: 700;
+    font-size: x-large;
+}
+
+.link {
+    text-decoration: none;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 600;
+    color: #424242;
+}
+
+
+/* ========== Colors ========== */
+body {
+    background-color: #F2F2F2;
+}
+
+.share-social {
+    display: inline-block;
+}
+
+gray-back {
+    background-color: #414346;
+}
+
+
+footer {
+    margin-top: 5%;
+}
+
+.header-card {
+    font-weight: 400;
+    padding: 8px 4px;
+    margin: 1% 25%;
+    border-radius: 8px;
+    font-size: medium;
+    width: match-parent;
+    text-align: center;
+}
