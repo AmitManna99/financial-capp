@@ -18,8 +18,12 @@ calInflation.addEventListener('submit', function (e) {
     var settings = {
         "async": true,
         "crossDomain": true,
-        "url": "https://capp-api.herokuapp.com/inflation/?amount=" + amount + "&time=" + time + "&rate=" + rate,
-        "method": "GET"
+        "url": "https://mutual-fund-calculator.p.rapidapi.com/inflation/?amount=" + amount + "&time=" + time + "&rate=" + rate,
+        "method": "GET",
+        "headers": {
+            "x-rapidapi-host": "mutual-fund-calculator.p.rapidapi.com",
+            "x-rapidapi-key": "f3fe549e87msh054dcee16b82229p11cc3ajsn69121657c69d",
+        }
     };
 
     $.ajax(settings).done(function (response) {
@@ -44,8 +48,12 @@ calRIP.addEventListener('submit', function (e) {
     var settings = {
         "async": true,
         "crossDomain": true,
-        "url": "https://capp-api.herokuapp.com/ripcalculator/?monthly_expenses=" + amount + "&surv_year=" + time,
-        "method": "GET"
+        "url": "https://mutual-fund-calculator.p.rapidapi.com/ripcalculator/?monthly_expenses=" + amount + "&surv_year=" + time,
+        "method": "GET",
+        "headers": {
+            "x-rapidapi-host": "mutual-fund-calculator.p.rapidapi.com",
+            "x-rapidapi-key": "f3fe549e87msh054dcee16b82229p11cc3ajsn69121657c69d",
+        }
     };
 
     $.ajax(settings).done(function (response) {
@@ -111,15 +119,19 @@ calGoal.addEventListener('submit', function (e) {
     var settings = {
         "async": true,
         "crossDomain": true,
-        "url": "https://capp-api.herokuapp.com/goalsip/?target=" + target + "&time=" + time + "&rate=" + rate,
-        "method": "GET"
+        "url": "https://mutual-fund-calculator.p.rapidapi.com/goalsip/?target=" + target + "&time=" + time + "&rate=" + rate,
+        "method": "GET",
+        "headers": {
+            "x-rapidapi-host": "mutual-fund-calculator.p.rapidapi.com",
+            "x-rapidapi-key": "f3fe549e87msh054dcee16b82229p11cc3ajsn69121657c69d",
+        }
     };
 
     $.ajax(settings).done(function (response) {
 
         const data = `<br>
                       <span class="invested-text">
-                        Your Investment : ${response['Invested']}
+                        Your Inestment : ${response['Invested']}
                       </span>
                       <br>
                       <span class="profit-text"> 
@@ -146,9 +158,12 @@ calSIP.addEventListener('submit', function (e) {
     var settings = {
         "async": true,
         "crossDomain": true,
-        "url": "https://capp-api.herokuapp.com/sipcalculator/?amount=" + amount + "&time=" + time + "&rate=" + rate,
+        "url": "https://mutual-fund-calculator.p.rapidapi.com/sipcalculator/?amount=" + amount + "&time=" + time + "&rate=" + rate,
         "method": "GET",
-        "mode": "no-cors"
+        "headers": {
+            "x-rapidapi-host": "mutual-fund-calculator.p.rapidapi.com",
+            "x-rapidapi-key": "f3fe549e87msh054dcee16b82229p11cc3ajsn69121657c69d",
+        }
     };
 
     $.ajax(settings).done(function (response) {
