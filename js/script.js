@@ -16,9 +16,14 @@ calInflation.addEventListener('submit', function (e) {
     rate = e.target.elements[2].value;
 
     var settings = {
-        "url": "http://amitm99.pythonanywhere.com/inflation/?amount=" + amount + "&time=" + time + "&rate=" + rate,
+        "async": true,
+        "crossDomain": true,
+        "url": "https://mutual-fund-calculator.p.rapidapi.com/inflation/?amount=" + amount + "&time=" + time + "&rate=" + rate,
         "method": "GET",
-        "timeout": 0,
+        "headers": {
+            "x-rapidapi-host": "mutual-fund-calculator.p.rapidapi.com",
+            "x-rapidapi-key": "f3fe549e87msh054dcee16b82229p11cc3ajsn69121657c69d",
+        }
     };
 
     $.ajax(settings).done(function (response) {
@@ -41,9 +46,14 @@ calRIP.addEventListener('submit', function (e) {
     time = e.target.elements[1].value;
 
     var settings = {
-        "url": "http://amitm99.pythonanywhere.com/ripcalculator/?monthly_expenses=" + amount + "&surv_year=" + time,
+        "async": true,
+        "crossDomain": true,
+        "url": "https://mutual-fund-calculator.p.rapidapi.com/ripcalculator/?monthly_expenses=" + amount + "&surv_year=" + time,
         "method": "GET",
-        "timeout": 0,
+        "headers": {
+            "x-rapidapi-host": "mutual-fund-calculator.p.rapidapi.com",
+            "x-rapidapi-key": "f3fe549e87msh054dcee16b82229p11cc3ajsn69121657c69d",
+        }
     };
 
     $.ajax(settings).done(function (response) {
@@ -107,9 +117,14 @@ calGoal.addEventListener('submit', function (e) {
     rate = e.target.elements[2].value;
 
     var settings = {
-        "url": "http://amitm99.pythonanywhere.com/goalsip/?target=" + target + "&time=" + time + "&rate=" + rate,
+        "async": true,
+        "crossDomain": true,
+        "url": "https://mutual-fund-calculator.p.rapidapi.com/goalsip/?target=" + target + "&time=" + time + "&rate=" + rate,
         "method": "GET",
-        "timeout": 0,
+        "headers": {
+            "x-rapidapi-host": "mutual-fund-calculator.p.rapidapi.com",
+            "x-rapidapi-key": "f3fe549e87msh054dcee16b82229p11cc3ajsn69121657c69d",
+        }
     };
 
     $.ajax(settings).done(function (response) {
@@ -141,9 +156,14 @@ calSIP.addEventListener('submit', function (e) {
     rate = e.target.elements[2].value;
 
     var settings = {
-        "url": "http://amitm99.pythonanywhere.com/sipcalculator/?amount=" + amount + "&time=" + time + "&rate=" + rate,
+        "async": true,
+        "crossDomain": true,
+        "url": "https://mutual-fund-calculator.p.rapidapi.com/sipcalculator/?amount=" + amount + "&time=" + time + "&rate=" + rate,
         "method": "GET",
-        "timeout": 0,
+        "headers": {
+            "x-rapidapi-host": "mutual-fund-calculator.p.rapidapi.com",
+            "x-rapidapi-key": "f3fe549e87msh054dcee16b82229p11cc3ajsn69121657c69d",
+        }
     };
 
     $.ajax(settings).done(function (response) {
