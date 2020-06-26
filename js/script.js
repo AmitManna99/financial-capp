@@ -16,7 +16,7 @@ calInflation.addEventListener('submit', function (e) {
     rate = e.target.elements[2].value;
 
     var settings = {
-        "url": "http://127.0.0.1:5000/inflation/?amount=" + amount + "&time=" + time + "&rate=" + rate,
+        "url": "http://amitm99.pythonanywhere.com/inflation/?amount=" + amount + "&time=" + time + "&rate=" + rate,
         "method": "GET",
         "timeout": 0,
     };
@@ -41,7 +41,7 @@ calRIP.addEventListener('submit', function (e) {
     time = e.target.elements[1].value;
 
     var settings = {
-        "url": "http://127.0.0.1:5000/ripcalculator/?monthly_expenses=" + amount + "&surv_year=" + time,
+        "url": "http://amitm99.pythonanywhere.com/ripcalculator/?monthly_expenses=" + amount + "&surv_year=" + time,
         "method": "GET",
         "timeout": 0,
     };
@@ -107,7 +107,7 @@ calGoal.addEventListener('submit', function (e) {
     rate = e.target.elements[2].value;
 
     var settings = {
-        "url": "http://127.0.0.1:5000/goalsip/?target=" + target + "&time=" + time + "&rate=" + rate,
+        "url": "http://amitm99.pythonanywhere.com/goalsip/?target=" + target + "&time=" + time + "&rate=" + rate,
         "method": "GET",
         "timeout": 0,
     };
@@ -141,7 +141,7 @@ calSIP.addEventListener('submit', function (e) {
     rate = e.target.elements[2].value;
 
     var settings = {
-        "url": "http://127.0.0.1:5000/sipcalculator/?amount=" + amount + "&time=" + time + "&rate=" + rate,
+        "url": "http://amitm99.pythonanywhere.com/sipcalculator/?amount=" + amount + "&time=" + time + "&rate=" + rate,
         "method": "GET",
         "timeout": 0,
     };
