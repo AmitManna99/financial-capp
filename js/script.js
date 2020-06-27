@@ -18,12 +18,8 @@ calInflation.addEventListener('submit', function (e) {
     var settings = {
         "async": true,
         "crossDomain": true,
-        "url": "https://mutual-fund-calculator.p.rapidapi.com/inflation/?amount=" + amount + "&time=" + time + "&rate=" + rate,
-        "method": "GET",
-        "headers": {
-            "x-rapidapi-host": "mutual-fund-calculator.p.rapidapi.com",
-            "x-rapidapi-key": "f3fe549e87msh054dcee16b82229p11cc3ajsn69121657c69d",
-        }
+        "url": "https://cors-anywhere.herokuapp.com/https://capp-api.herokuapp.com/inflation/?amount=" + amount + "&time=" + time + "&rate=" + rate,
+        "method": "GET"
     };
 
     $.ajax(settings).done(function (response) {
@@ -48,16 +44,12 @@ calRIP.addEventListener('submit', function (e) {
     var settings = {
         "async": true,
         "crossDomain": true,
-        "url": "https://mutual-fund-calculator.p.rapidapi.com/ripcalculator/?monthly_expenses=" + amount + "&surv_year=" + time,
-        "method": "GET",
-        "headers": {
-            "x-rapidapi-host": "mutual-fund-calculator.p.rapidapi.com",
-            "x-rapidapi-key": "f3fe549e87msh054dcee16b82229p11cc3ajsn69121657c69d",
-        }
+        "url": "https://cors-anywhere.herokuapp.com/https://capp-api.herokuapp.com/ripcalculator/?monthly_expenses=" + amount + "&surv_year=" + time,
+        "method": "GET"
     };
 
     $.ajax(settings).done(function (response) {
-
+        
         const data = `<br>
                       <span class="invested-text">
                         You need Minimum <span class="loss-text">${Math.floor(response['Invest in Bank'][0]+response['Yearly Expenses'][0])}</span> Rupees for Survival at the time of Retirement.
@@ -119,12 +111,8 @@ calGoal.addEventListener('submit', function (e) {
     var settings = {
         "async": true,
         "crossDomain": true,
-        "url": "https://mutual-fund-calculator.p.rapidapi.com/goalsip/?target=" + target + "&time=" + time + "&rate=" + rate,
-        "method": "GET",
-        "headers": {
-            "x-rapidapi-host": "mutual-fund-calculator.p.rapidapi.com",
-            "x-rapidapi-key": "f3fe549e87msh054dcee16b82229p11cc3ajsn69121657c69d",
-        }
+        "url": "https://cors-anywhere.herokuapp.com/https://capp-api.herokuapp.com/goalsip/?target=" + target + "&time=" + time + "&rate=" + rate,
+        "method": "GET"
     };
 
     $.ajax(settings).done(function (response) {
@@ -158,12 +146,8 @@ calSIP.addEventListener('submit', function (e) {
     var settings = {
         "async": true,
         "crossDomain": true,
-        "url": "https://mutual-fund-calculator.p.rapidapi.com/sipcalculator/?amount=" + amount + "&time=" + time + "&rate=" + rate,
-        "method": "GET",
-        "headers": {
-            "x-rapidapi-host": "mutual-fund-calculator.p.rapidapi.com",
-            "x-rapidapi-key": "f3fe549e87msh054dcee16b82229p11cc3ajsn69121657c69d",
-        }
+        "url": "https://cors-anywhere.herokuapp.com/https://capp-api.herokuapp.com/sipcalculator/?amount=" + amount + "&time=" + time + "&rate=" + rate,
+        "method": "GET"
     };
 
     $.ajax(settings).done(function (response) {
